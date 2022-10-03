@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;1,500&family=Karla:wght@400;700&display=swap');
 $font-body: 'Epilogue';
-$size-text: 18px;
+$font-size-body: 18px;
 
 
 *{
@@ -8,5 +8,5 @@ $size-text: 18px;
     padding: 0;
     box-sizing: border-box;
     font-family: $font-body;
-    font-size: $size-text;
+    font-size: $font-size-body;
 }
