@@ -10,21 +10,13 @@ $font-size-body: 16px;
   @return $t * $font-size-body;
 }
 
-//Variables SCSS
-$color-header: white;
-$background-color-nav: hsl(0, 0%, 98%);
-$color-links: hsl(273, 4%, 51%);
-$color-btns: hsl(270, 9%, 17%);
-$font-size-body: 16px;
-
-
 //imports
 @import "universal";
 
 //funciones
 @function size($t) {
-    @return $t * $font-size-body;
-  }
+  @return $t * $font-size-body;
+}
 //mixins
 @mixin paddings($t) {
   padding: $t * 1px $t * 4px;
@@ -44,64 +36,64 @@ $font-size-body: 16px;
   }
 }
 
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 3vw;
 
-.main{
+  &__container {
+    height: 50vw;
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
+    justify-content: center;
+  }
+  &__text {
+    max-width: 100%;
     height: 100%;
-    padding-top: 3vw;
-
-    &__container{
-        height: 50vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-        &__text{
-            max-width: 100%;
-            height: 100%;
-            line-height: 2vw;
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            @include paddings(10);
-        }
-        &__tittle{
-            max-width: 100%;
-            font-size: size(5);
-            line-height: 6vw;
-        }
-        &__parrafo{
-            @include paddings(40);
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 4vw;
-        }
-        &__icons{
-            display: flex;
-            align-items: center;
-            max-width: 100%;
-            height: 20%;
-            gap: 4vw;
-        }
-        &__image{
-            padding-right: 5vw;
-            width: 60%;
-            display: flex;
-            justify-content: end;
-         }
-         &__images{
-            max-width: 100%;
-         }
-         &__button{
-            @include botones(5, $color-links, $background-color-nav);
-            width: 30%;
-            height: 3vw;
-         }
+    line-height: 2vw;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include paddings(10);
+  }
+  &__tittle {
+    max-width: 100%;
+    font-size: size(5);
+    line-height: 6vw;
+  }
+  &__parrafo {
+    @include paddings(40);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    height: 20%;
+    gap: 4vw;
+  }
+  &__image {
+    padding-right: 5vw;
+    width: 60%;
+    display: flex;
+    justify-content: end;
+  }
+  &__images {
+    max-width: 100%;
+  }
+  &__button {
+    @include botones(5, $color-links, $background-color-nav);
+    width: 30%;
+    height: 3vw;
+  }
+}
 
 .main {
   display: flex;
@@ -191,9 +183,6 @@ p {
       display: none;
     }
   }
-
-}
-
 }
 
 .header__item {
@@ -222,4 +211,3 @@ p {
   display: block;
   box-shadow: 5px 5px black;
 }
-
