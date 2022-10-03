@@ -34,7 +34,7 @@
 
 .main__tittle {
   max-width: 100%;
-  font-size: size(5);
+  font-size: 80px;
   line-height: 5vw;
 }
 
@@ -61,32 +61,33 @@ p {
 .images {
   max-width: 100%;
 }
-.images .header {
+
+.header {
   color: white;
 }
-.images .header__nav {
+.header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 80px;
   background-color: hsl(0deg, 0%, 98%);
 }
-.images .header__list {
+.header__list {
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 32px;
 }
-.images .header__item a {
+.header__item a {
   text-decoration: none;
   color: hsl(273deg, 4%, 51%);
   font-weight: 700;
 }
-.images .header__item a:hover {
+.header__item a:hover {
   color: hsl(270deg, 9%, 17%);
 }
-.images .header__item button {
+.header__item button {
   padding: 5px 20px;
   color: hsl(270deg, 9%, 17%);
   font-weight: 700;
@@ -95,12 +96,44 @@ p {
   border: 3px solid hsl(270deg, 9%, 17%);
   cursor: pointer;
 }
-.images .header__item button:hover {
+.header__item button:hover {
   background-color: hsl(0deg, 0%, 98%);
   color: hsl(270deg, 9%, 17%);
 }
-.images .header__item--mobile {
+.header__item--mobile {
   display: none;
+}
+
+.header__item {
+  position: relative;
+}
+
+.dropdown {
+  background-color: rgb(255, 255, 255);
+  padding: 1em 0;
+  position: absolute;
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: #ffffff;
+}
+
+.header__item:hover .dropdown {
+  display: block;
+  box-shadow: 5px 5px black;
 }
 
 /*# sourceMappingURL=style.css.map */
