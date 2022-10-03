@@ -1,37 +1,92 @@
-@import url("https://fonts.googleapis.com/css2?family=Epilogue&family=Karla:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;1,500&family=Karla:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Epilogue";
+  font-size: 18px;
 }
 
-.header {
+.main {
+  display: flex;
+  width: 100%;
+  padding: 20px 80px;
+}
+
+.main_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
+
+.main_text {
+  max-width: 100%;
+  height: 40vw;
+  line-height: 2vw;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rebeccapurple;
+  padding: 10px 40px;
+}
+
+.main__tittle {
+  max-width: 100%;
+  font-size: size(5);
+  line-height: 5vw;
+}
+
+p {
+  padding: 50px 200px;
+}
+
+.main_icons {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+  height: 5%;
+  gap: 4vw;
+  background-color: bisque;
+}
+
+.main_image {
+  padding-right: 3vw;
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+
+.images {
+  max-width: 100%;
+}
+.images .header {
   color: white;
 }
-.header__nav {
+.images .header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 80px;
   background-color: hsl(0deg, 0%, 98%);
 }
-.header__list {
+.images .header__list {
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 32px;
 }
-.header__item a {
+.images .header__item a {
   text-decoration: none;
   color: hsl(273deg, 4%, 51%);
   font-weight: 700;
 }
-.header__item a:hover {
+.images .header__item a:hover {
   color: hsl(270deg, 9%, 17%);
 }
-.header__item button {
+.images .header__item button {
   padding: 5px 20px;
   color: hsl(270deg, 9%, 17%);
   font-weight: 700;
@@ -40,11 +95,11 @@
   border: 3px solid hsl(270deg, 9%, 17%);
   cursor: pointer;
 }
-.header__item button:hover {
+.images .header__item button:hover {
   background-color: hsl(0deg, 0%, 98%);
   color: hsl(270deg, 9%, 17%);
 }
-.header__item--mobile {
+.images .header__item--mobile {
   display: none;
 }
 
