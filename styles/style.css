@@ -1,3 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;1,500&family=Karla:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Epilogue";
+  font-size: 18px;
+}
 
+.main {
+  display: flex;
+  width: 100%;
+  padding: 20px 80px;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 80px;
+}
+
+.main_text {
+  width: 100%;
+  height: 25vw;
+  line-height: 2vw;
+  align-items: center;
+}
+
+.main__tittle {
+  height: 50%;
+  font-size: 90px;
+  line-height: 5vw;
+}
+
+p {
+  width: 50%;
+}
+
+.main_icons {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 5%;
+  gap: 4vw;
+}
+
+.main_image {
+  padding-right: 3vw;
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+
+.images {
+  width: 100%;
+}
 
 /*# sourceMappingURL=style.css.map */
