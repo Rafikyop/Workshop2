@@ -34,7 +34,7 @@
 
 .main__tittle {
   max-width: 100%;
-  font-size: 90px;
+  font-size: size(5);
   line-height: 5vw;
 }
 
@@ -60,6 +60,47 @@ p {
 
 .images {
   max-width: 100%;
+}
+.images .header {
+  color: white;
+}
+.images .header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background-color: hsl(0deg, 0%, 98%);
+}
+.images .header__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+.images .header__item a {
+  text-decoration: none;
+  color: hsl(273deg, 4%, 51%);
+  font-weight: 700;
+}
+.images .header__item a:hover {
+  color: hsl(270deg, 9%, 17%);
+}
+.images .header__item button {
+  padding: 5px 20px;
+  color: hsl(270deg, 9%, 17%);
+  font-weight: 700;
+  background-color: hsl(0deg, 0%, 98%);
+  border-radius: 10px;
+  border: 3px solid hsl(270deg, 9%, 17%);
+  cursor: pointer;
+}
+.images .header__item button:hover {
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(270deg, 9%, 17%);
+}
+.images .header__item--mobile {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

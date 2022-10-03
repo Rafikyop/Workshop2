@@ -1,19 +1,25 @@
 
+//imports
+@import "universal";
 
-@import 'universal';
-
-//Declaración de funciones
-@function size($t) {
-    @return $t*$size_text;
+//mixins
+@mixin paddings($t) {
+  padding: $t * 1px $t * 4px;
 }
-@mixin paddings ($t) {
-    padding: $t*1px $t*4px;
+
+@mixin botones($s, $color-letters, $color-backg) {
+  @include paddings($s);
+  color: $color-letters;
+  font-weight: 700;
+  background-color: $color-backg;
+  border-radius: 10px;
+  border: 3px solid $color-letters;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-backg;
+    color: $color-letters;
+  }
 }
-//variables
-$main-color: hsl(0, 0%, 98%);
-
-
-
 
 .main{
     display: flex; 
@@ -65,4 +71,57 @@ p{
 }
 .images{
    max-width: 100%;
+
+//Variables SCSS
+$color-header: white;
+$background-color-nav: hsl(0, 0%, 98%);
+$color-links: hsl(273, 4%, 51%);
+$color-btns: hsl(270, 9%, 17%);
+$font-size-body: 16px;
+
+//funciones
+@function size($t) {
+  @return $t * $font-size-body;
+}
+
+
+.header {
+  color: $color-header;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include paddings(20);
+    background-color: $background-color-nav;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: size(2);
+  }
+
+  &__item {
+    a {
+      text-decoration: none;
+      color: $color-links;
+      font-weight: 700;
+
+      &:hover {
+        color: $color-btns;
+      }
+    }
+
+    button {
+      @include botones(5, $color-btns, $background-color-nav);
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+}
 }
