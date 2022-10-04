@@ -3,7 +3,8 @@ $color-header: white;
 $background-color-nav: hsl(0, 0%, 98%);
 $color-links: hsl(273, 4%, 51%);
 $color-btns: hsl(270, 9%, 17%);
-$font-size-body: 16px;
+$color-hover:black;
+$font-size-body: 18px;
 
 //funciones
 @function size($t) {
@@ -31,10 +32,14 @@ $font-size-body: 16px;
   border: 2px solid $color-links;
   cursor: pointer;
   &:hover {
-    background-color: $color-backg;
+    background-color: $color-hover;
     color: $color-links;
   }
 }
+body{
+    width: 100%;
+}
+.main{
 
 .main {
   display: flex;
@@ -55,6 +60,66 @@ $font-size-body: 16px;
     height: 100%;
     line-height: 2vw;
     align-items: center;
+    height: 43vw;
+    padding-top: 3vw;
+    @include paddings(20);
+
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 3vw;
+        width: 90vw;
+        margin-top: 8vw;
+    }
+        &__text{
+            width: 100%;
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1vw;
+        }
+        &__tittle{
+            width: 90%;
+            padding-right: 6vw;
+            height: 15vw;
+            font-size: size(6);
+            line-height: 6vw;
+            display: flex;
+            align-items: flex-start;
+            align-items: center;
+        }
+        &__parrafo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5vw;
+            padding-right: 13vw;
+            font-size: size(1.5);
+            line-height: 2vw;
+        }
+        &__icons{
+            display: flex;
+            align-items:flex-start;
+            width: 80%;
+            gap: 7vw;
+        }
+        &__image{
+            padding-right: 3vw;
+            width: 80%;
+            display: flex;
+            justify-content: end;
+         }
+         &__images{
+            width: 80%;
+         }
+         &__button{
+            @include botones(5, $color-links, $background-color-nav);
+            width: 30%;
+            margin-bottom: 5vw;
+            height: 3vw;
+         }
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -185,6 +250,73 @@ p {
   }
 }
 
+@media screen and (max-width: 375px) {
+    .header{
+        &__nav{
+            width: 200vw;
+        }
+        &__list{
+            visibility: hidden;
+        }
+    }
+    body{
+        width: 100%;
+        height: 100%;
+        gap: 1vw;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+
+    }
+    .main{
+        width: 200vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &__container{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            width: 200vw;
+            height: 300vw;
+        }
+        &__text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+        &__tittle{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 20%;
+            font-size: size(3);
+        }
+        &__parrafo{
+            width: 100%;
+            height: 70%;
+            font-size: size(1.8);
+            line-height: 10vw;
+            align-items: center;
+            display: flex;
+            justify-content: flex-start;
+            @include paddings(10);
+        }
+        &__button{
+            width: 50%;
+            height: 30%;
+            font-size: size(1.5);
+            @include botones(5, $color-links, $background-color-nav)
+
+        }
+    }
+
+}
 .header__item {
   position: relative;
 }
