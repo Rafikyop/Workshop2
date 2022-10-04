@@ -1,4 +1,3 @@
-
 //Variables SCSS
 $color-header: white;
 $background-color-nav: hsl(0, 0%, 98%);
@@ -7,14 +6,18 @@ $color-btns: hsl(270, 9%, 17%);
 $color-hover:black;
 $font-size-body: 18px;
 
+//funciones
+@function size($t) {
+  @return $t * $font-size-body;
+}
 
 //imports
 @import "universal";
 
 //funciones
 @function size($t) {
-    @return $t * $font-size-body;
-  }
+  @return $t * $font-size-body;
+}
 //mixins
 @mixin paddings($t) {
   padding: $t * 1px $t * 4px;
@@ -37,8 +40,25 @@ body{
     width: 100%;
 }
 .main{
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 3vw;
+
+  &__container {
+    height: 50vw;
     display: flex;
+    align-items: center;
     justify-content: center;
+  }
+  &__text {
+    max-width: 100%;
+    height: 100%;
+    line-height: 2vw;
     align-items: center;
     height: 43vw;
     padding-top: 3vw;
@@ -100,8 +120,95 @@ body{
             margin-bottom: 5vw;
             height: 3vw;
          }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include paddings(10);
+  }
+  &__tittle {
+    max-width: 100%;
+    font-size: size(5);
+    line-height: 6vw;
+  }
+  &__parrafo {
+    @include paddings(40);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    height: 20%;
+    gap: 4vw;
+  }
+  &__image {
+    padding-right: 5vw;
+    width: 60%;
+    display: flex;
+    justify-content: end;
+  }
+  &__images {
+    max-width: 100%;
+  }
+  &__button {
+    @include botones(5, $color-links, $background-color-nav);
+    width: 30%;
+    height: 3vw;
+  }
 }
 
+.main {
+  display: flex;
+  width: 100%;
+  @include paddings(20);
+}
+
+.main_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
+.main_text {
+  max-width: 100%;
+  height: 40vw;
+  line-height: 2vw;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rebeccapurple;
+  @include paddings(10);
+}
+.main__tittle {
+  max-width: 100%;
+  font-size: size(5);
+  line-height: 5vw;
+}
+p {
+  @include paddings(50);
+}
+
+.main_icons {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+  height: 5%;
+  gap: 4vw;
+  background-color: bisque;
+}
+.main_image {
+  padding-right: 3vw;
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+.images {
+  max-width: 100%;
+}
 
 .header {
   color: $color-header;
@@ -209,4 +316,30 @@ body{
         }
     }
 
+}
+.header__item {
+  position: relative;
+}
+.dropdown {
+  background-color: rgb(255, 255, 255);
+  padding: 1em 0;
+  position: absolute;
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+.dropdown li + li {
+  margin-top: 10px;
+}
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+.dropdown li:hover {
+  background-color: #ffffff;
+}
+.header__item:hover .dropdown {
+  display: block;
+  box-shadow: 5px 5px black;
 }

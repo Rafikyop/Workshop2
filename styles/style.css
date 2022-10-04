@@ -44,6 +44,8 @@ body {
   display: flex;
   align-items: flex-start;
   align-items: center;
+  font-size: 80px;
+  line-height: 5vw;
 }
 .main__parrafo {
   display: flex;
@@ -114,6 +116,8 @@ body {
 .header__item button {
   padding: 4px 16px;
   color: black;
+  padding: 5px 20px;
+  color: hsl(270deg, 9%, 17%);
   font-weight: 700;
   background-color: hsl(0deg, 0%, 98%);
   border-radius: 12px;
@@ -198,6 +202,36 @@ body {
     background-color: black;
     color: hsl(273deg, 4%, 51%);
   }
+.header__item {
+  position: relative;
+}
+
+.dropdown {
+  background-color: rgb(255, 255, 255);
+  padding: 1em 0;
+  position: absolute;
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: #ffffff;
+}
+
+.header__item:hover .dropdown {
+  display: block;
+  box-shadow: 5px 5px black;
 }
 
 /*# sourceMappingURL=style.css.map */
